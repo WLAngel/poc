@@ -6,8 +6,9 @@ const rp = require('request-promise');
 
 const app = express();
 
-const graphqlEndpoint = 'https://edjjigokejg3ldptpes4nlvlwa.appsync-api.ap-northeast-1.amazonaws.com/graphql';
-const region = 'ap-northeast-1';
+// fix me
+const graphqlEndpoint = 'https://xxx.amazonaws.com/graphql';
+const region = '';
 
 app.use(bodyParser.json());
 
@@ -34,7 +35,6 @@ app.post('/graphql', (request, response) => {
     rp(options).then(console.log);
     response.send('pew');
   });
-  
 });
 
 app.listen(8080, () => {
